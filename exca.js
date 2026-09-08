@@ -1,7 +1,7 @@
 import API_Key from "./config.js"
 
 const amt = 6;
-
+console.log("EXCA.JS LOADED");
 function search (search, type){
     console.log("https://pixabay.com/api/?key="+ API_Key+ "&q="+ search + "&per_page=" + amt);
 
@@ -20,7 +20,7 @@ function search (search, type){
                 console.log("Empty");
                 return;
             }
-            result_page = document.getElementById("results");
+            const result_page = document.getElementById("results");
             result_page.innerHTML = "";
             for(let i=0;i<amt; i++){
                 const image = document.createElement("img");
@@ -44,7 +44,7 @@ function search (search, type){
                 console.log("Empty");
                 return;
             }
-            result_page = document.getElementById("results");
+            const result_page = document.getElementById("results");
             result_page.innerHTML = "";
             for(let i=0;i<amt; i++){
                 const video = document.createElement("video");
@@ -61,3 +61,4 @@ function search (search, type){
         return;
     }
 }
+window.search = search;
