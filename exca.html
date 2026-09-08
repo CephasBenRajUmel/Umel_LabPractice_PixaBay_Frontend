@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Exca Pixabay Attempt </title>
+        <link rel="stylesheet" href="exca.css">
+        <script type="module" src = "exca.js"></script>
+    </head>
+    <body>
+        <header> Excalibur537's Header </header>
+        <nav id="search-bar">
+            <input id="input_bar" placeholder="Search here!" type="text">
+            <select id="type_select">
+                <option value="image" selected>image</option>
+                <option value="video">video</option>
+            </select>
+            <button
+            onclick = "search(document.getElementById('input_bar').value, document.getElementById('type_select').value)"> 
+            Search </button>
+        </nav>
+        <div id="categories">
+            <button onclick = "search('Cat', document.getElementById('type_select').value)"> Cat </button>
+            <button onclick = "search('Dog', document.getElementById('type_select').value)"> Dog </button>
+            <button onclick = "search('BMW', document.getElementById('type_select').value)"> BMW </button>
+            <button onclick = "search('Tank', document.getElementById('type_select').value)"> Tank </button>
+            <button onclick = "search('Kings', document.getElementById('type_select').value)"> Kings </button>
+        </div>
+        <div id="results">
+
+        </div>
+    </body>
+</html>
